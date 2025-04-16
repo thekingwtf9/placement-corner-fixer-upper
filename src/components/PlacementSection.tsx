@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Building, Briefcase, Users, GraduationCap } from "lucide-react";
 
 const PlacementSection = () => {
   // Sample placement statistics
@@ -15,14 +16,37 @@ const PlacementSection = () => {
     "Accenture", "Google", "IBM", "Deloitte", "KPMG"
   ];
 
+  // Sample highlights
+  const highlights = [
+    { icon: Building, title: "500+", description: "Companies Visited" },
+    { icon: Briefcase, title: "95%", description: "Placement Rate" },
+    { icon: Users, title: "5000+", description: "Students Placed" },
+    { icon: GraduationCap, title: "42 LPA", description: "Highest Package" },
+  ];
+
   return (
-    <section id="placements" className="py-16">
+    <section id="placements" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-blue-900 mb-2">Placement Highlights</h2>
+          <h2 className="text-3xl font-bold text-blue-900 mb-2">Placement Cell</h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Our institution has a strong track record of placements with top companies across various sectors.
+            The Placement Cell at Ganga Mai Engineering College works tirelessly to connect our talented students with top companies across various sectors. We take pride in our excellent placement record.
           </p>
+        </div>
+
+        {/* Placement Highlights */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {highlights.map((item, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
+              <div className="flex justify-center mb-4">
+                <div className="p-3 rounded-full bg-blue-100 text-blue-700">
+                  <item.icon className="h-8 w-8" />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-blue-900">{item.title}</h3>
+              <p className="text-gray-600">{item.description}</p>
+            </div>
+          ))}
         </div>
 
         {/* Placement Statistics */}
@@ -52,6 +76,30 @@ const PlacementSection = () => {
           </div>
         </div>
 
+        {/* Placement Process */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-blue-800 mb-6 text-center">Placement Process</h3>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                <div className="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-4">1</div>
+                <h4 className="font-semibold text-lg mb-2">Pre-Placement Training</h4>
+                <p className="text-gray-600">Resume building, aptitude training and technical workshops</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                <div className="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-4">2</div>
+                <h4 className="font-semibold text-lg mb-2">Campus Drives</h4>
+                <p className="text-gray-600">Aptitude tests, technical and HR interviews</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                <div className="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-4">3</div>
+                <h4 className="font-semibold text-lg mb-2">Placement</h4>
+                <p className="text-gray-600">Offer letters, internships and final placements</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Top Recruiters */}
         <div>
           <h3 className="text-2xl font-bold text-blue-800 mb-6 text-center">Our Top Recruiters</h3>
@@ -59,7 +107,7 @@ const PlacementSection = () => {
             {topRecruiters.map((company, index) => (
               <div 
                 key={index} 
-                className="bg-white p-4 rounded-lg shadow text-center flex items-center justify-center h-24"
+                className="bg-white p-4 rounded-lg shadow-md text-center flex items-center justify-center h-24 hover:shadow-lg transition-shadow"
               >
                 <span className="font-medium text-gray-800">{company}</span>
               </div>

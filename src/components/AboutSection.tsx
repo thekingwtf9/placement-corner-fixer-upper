@@ -3,50 +3,67 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-16 bg-gray-50">
+    <section id="about" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-blue-900 mb-2">About Our Placement Cell</h2>
+          <h2 className="text-3xl font-bold text-blue-900 mb-2">About Ganga Mai Engineering College</h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Dedicated to bridging the gap between industry and academia, our placement cell works to ensure every student gets the right opportunity.
+            A premier institution committed to providing quality education in engineering and technology
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <div className="h-14 w-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold text-blue-900 mb-2">Corporate Relations</h3>
-            <p className="text-gray-600">
-              Strong network with 500+ companies across various sectors including IT, finance, manufacturing and more.
-            </p>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <img 
+              src="/placeholder.svg" 
+              alt="College Campus" 
+              className="rounded-lg shadow-md w-full h-auto"
+            />
           </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <div className="h-14 w-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold text-blue-900 mb-2">Training Programs</h3>
-            <p className="text-gray-600">
-              Comprehensive training on technical skills, soft skills, interview preparation, and career guidance.
+          <div>
+            <h3 className="text-2xl font-bold text-blue-800 mb-4">Our Vision</h3>
+            <p className="text-gray-600 mb-6">
+              To be a center of excellence in technical education, producing competent engineers with social responsibility, ethical values, and leadership qualities.
             </p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <div className="h-14 w-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
+            
+            <h3 className="text-2xl font-bold text-blue-800 mb-4">Our Mission</h3>
+            <ul className="space-y-3 text-gray-600 mb-6">
+              <li className="flex items-start">
+                <span className="text-blue-700 font-bold mr-2">•</span>
+                <span>To provide quality education through innovative teaching-learning processes</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-700 font-bold mr-2">•</span>
+                <span>To establish industry-institute interaction for practical training of students</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-700 font-bold mr-2">•</span>
+                <span>To create an environment for students to develop their entrepreneurial skills</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-700 font-bold mr-2">•</span>
+                <span>To inculcate in students ethical values and sense of social responsibility</span>
+              </li>
+            </ul>
+
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h4 className="font-bold text-blue-800 text-xl mb-1">25+</h4>
+                <p className="text-gray-600">Years of Excellence</p>
+              </div>
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h4 className="font-bold text-blue-800 text-xl mb-1">100+</h4>
+                <p className="text-gray-600">Faculty Members</p>
+              </div>
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h4 className="font-bold text-blue-800 text-xl mb-1">5000+</h4>
+                <p className="text-gray-600">Alumni Network</p>
+              </div>
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h4 className="font-bold text-blue-800 text-xl mb-1">AICTE</h4>
+                <p className="text-gray-600">Approved</p>
+              </div>
             </div>
-            <h3 className="text-xl font-semibold text-blue-900 mb-2">Student Support</h3>
-            <p className="text-gray-600">
-              Personalized counseling, resume building, and continuous guidance throughout the placement process.
-            </p>
           </div>
         </div>
       </div>

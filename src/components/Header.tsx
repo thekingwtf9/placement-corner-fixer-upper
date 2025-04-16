@@ -9,15 +9,16 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           <div className="flex items-center">
             <Phone className="h-4 w-4 mr-2" />
-            <span className="text-sm">+91 1234567890</span>
+            <span className="text-sm">+91 123 456 7890</span>
           </div>
           <div className="flex items-center">
             <Mail className="h-4 w-4 mr-2" />
-            <span className="text-sm">placement@college.edu</span>
+            <span className="text-sm">info@gangamaiengg.org.in</span>
           </div>
         </div>
-        <div>
+        <div className="flex space-x-4">
           <a href="#" className="text-sm hover:underline">Student Login</a>
+          <a href="#" className="text-sm hover:underline">Faculty Login</a>
         </div>
       </div>
     </header>
