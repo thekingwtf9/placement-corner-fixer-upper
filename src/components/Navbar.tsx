@@ -12,27 +12,31 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md py-4">
+    <nav className="bg-white shadow-md py-3 sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <img src="https://gangamaiengg.org.in/assets/images/home/logo.png" alt="Ganga Mai Engineering College Logo" className="h-16 mr-3" />
-            <div>
-              <h1 className="text-2xl font-bold text-blue-900">Ganga Mai Engineering College</h1>
-              <p className="text-sm text-gray-600">Excellence in Education</p>
+            <img 
+              src="https://gangamaiengg.org.in/assets/images/home/logo.png" 
+              alt="Ganga Mai Engineering College Logo" 
+              className="h-16 mr-4" 
+            />
+            <div className="flex flex-col justify-center">
+              <h1 className="text-xl md:text-2xl font-bold text-blue-900">Ganga Mai Engineering College</h1>
+              <p className="text-xs md:text-sm text-gray-600">Excellence in Education</p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-6">
-            <a href="/" className="text-blue-900 font-medium hover:text-blue-700">Home</a>
-            <a href="#about" className="text-gray-600 hover:text-blue-700">About</a>
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-6">
+            <a href="/" className="px-3 py-2 text-blue-900 font-medium hover:text-blue-700 hover:bg-blue-50 rounded-md transition-colors">Home</a>
+            <a href="#about" className="px-3 py-2 text-gray-600 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-colors">About</a>
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-gray-600 hover:text-blue-700 bg-transparent">Academics</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="text-gray-600 hover:text-blue-700 bg-transparent hover:bg-blue-50">Academics</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4">
+                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
                           <a
@@ -76,9 +80,9 @@ const Navbar = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-gray-600 hover:text-blue-700 bg-transparent">Placements</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="text-gray-600 hover:text-blue-700 bg-transparent hover:bg-blue-50">Placements</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4">
+                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
                           <a
@@ -119,13 +123,13 @@ const Navbar = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <a href="#students" className="text-gray-600 hover:text-blue-700">Student Corner</a>
-            <a href="#contact" className="text-gray-600 hover:text-blue-700">Contact</a>
+            <a href="#students" className="px-3 py-2 text-gray-600 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-colors">Student Corner</a>
+            <a href="#contact" className="px-3 py-2 text-gray-600 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-colors">Contact</a>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-gray-600 focus:outline-none">
+            <button onClick={toggleMenu} className="text-gray-600 focus:outline-none p-2 hover:bg-gray-100 rounded-md">
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
               ) : (
@@ -137,25 +141,29 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 space-y-3">
-            <a href="/" className="block text-blue-900 font-medium hover:text-blue-700">Home</a>
-            <a href="#about" className="block text-gray-600 hover:text-blue-700">About</a>
-            <div className="block text-gray-600 hover:text-blue-700">
-              <button className="flex items-center" onClick={() => {}}>
+          <div className="md:hidden mt-4 pb-4 space-y-2 border-t border-gray-200 pt-3">
+            <a href="/" className="block px-4 py-2 text-blue-900 font-medium hover:text-blue-700 hover:bg-blue-50 rounded-md">Home</a>
+            <a href="#about" className="block px-4 py-2 text-gray-600 hover:text-blue-700 hover:bg-blue-50 rounded-md">About</a>
+            <div className="block text-gray-600">
+              <button className="flex items-center w-full px-4 py-2 hover:text-blue-700 hover:bg-blue-50 rounded-md" onClick={() => {}}>
                 Academics
               </button>
-            </div>
-            <div className="block text-gray-600 hover:text-blue-700">
-              <button className="flex items-center" onClick={() => {}}>
-                Placements
-              </button>
-              <div className="pl-4 mt-2 space-y-2">
-                <a href="#placements" className="block text-gray-600 hover:text-blue-700">Placement Statistics</a>
-                <a href="#placements" className="block text-gray-600 hover:text-blue-700">Recruiters</a>
+              <div className="pl-8 mt-1 space-y-1">
+                <a href="https://gangamaiengg.org.in/courses/btech" className="block px-4 py-2 text-gray-600 hover:text-blue-700 hover:bg-blue-50 rounded-md">B.Tech</a>
+                <a href="https://gangamaiengg.org.in/courses/mtech" className="block px-4 py-2 text-gray-600 hover:text-blue-700 hover:bg-blue-50 rounded-md">M.Tech</a>
               </div>
             </div>
-            <a href="#students" className="block text-gray-600 hover:text-blue-700">Student Corner</a>
-            <a href="#contact" className="block text-gray-600 hover:text-blue-700">Contact</a>
+            <div className="block text-gray-600">
+              <button className="flex items-center w-full px-4 py-2 hover:text-blue-700 hover:bg-blue-50 rounded-md" onClick={() => {}}>
+                Placements
+              </button>
+              <div className="pl-8 mt-1 space-y-1">
+                <a href="#placements" className="block px-4 py-2 text-gray-600 hover:text-blue-700 hover:bg-blue-50 rounded-md">Placement Statistics</a>
+                <a href="#placements" className="block px-4 py-2 text-gray-600 hover:text-blue-700 hover:bg-blue-50 rounded-md">Recruiters</a>
+              </div>
+            </div>
+            <a href="#students" className="block px-4 py-2 text-gray-600 hover:text-blue-700 hover:bg-blue-50 rounded-md">Student Corner</a>
+            <a href="#contact" className="block px-4 py-2 text-gray-600 hover:text-blue-700 hover:bg-blue-50 rounded-md">Contact</a>
           </div>
         )}
       </div>
