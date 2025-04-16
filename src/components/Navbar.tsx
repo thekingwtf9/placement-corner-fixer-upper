@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <img src="/placeholder.svg" alt="Ganga Mai Engineering College Logo" className="h-12 mr-3" />
+            <img src="https://gangamaiengg.org.in/assets/images/home/logo.png" alt="Ganga Mai Engineering College Logo" className="h-16 mr-3" />
             <div>
               <h1 className="text-2xl font-bold text-blue-900">Ganga Mai Engineering College</h1>
               <p className="text-sm text-gray-600">Excellence in Education</p>
@@ -50,7 +50,7 @@ const Navbar = () => {
                       </li>
                       <li>
                         <NavigationMenuLink asChild>
-                          <a href="#" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                          <a href="https://gangamaiengg.org.in/courses/btech" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">B.Tech</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Bachelor of Technology Programs
@@ -60,7 +60,7 @@ const Navbar = () => {
                       </li>
                       <li>
                         <NavigationMenuLink asChild>
-                          <a href="#" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                          <a href="https://gangamaiengg.org.in/courses/mtech" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">M.Tech</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Master of Technology Programs

@@ -14,16 +14,16 @@ const Footer = () => {
               Dedicated to providing quality education and excellent placement opportunities for all our students.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-blue-300">
+              <a href="https://www.facebook.com/gangamaiengineeringcollege/" className="text-white hover:text-blue-300">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-white hover:text-blue-300">
+              <a href="https://twitter.com/GMECNoida" className="text-white hover:text-blue-300">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-white hover:text-blue-300">
+              <a href="https://www.linkedin.com/school/gangamaiengg/" className="text-white hover:text-blue-300">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-white hover:text-blue-300">
+              <a href="https://www.instagram.com/gangamaiengineeringcollege/" className="text-white hover:text-blue-300">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -34,11 +34,11 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li><a href="/" className="text-blue-200 hover:text-white">Home</a></li>
-              <li><a href="#about" className="text-blue-200 hover:text-white">About</a></li>
-              <li><a href="#academics" className="text-blue-200 hover:text-white">Academics</a></li>
-              <li><a href="#placements" className="text-blue-200 hover:text-white">Placements</a></li>
-              <li><a href="#students" className="text-blue-200 hover:text-white">Student Corner</a></li>
-              <li><a href="#contact" className="text-blue-200 hover:text-white">Contact</a></li>
+              <li><a href="https://gangamaiengg.org.in/about" className="text-blue-200 hover:text-white">About</a></li>
+              <li><a href="https://gangamaiengg.org.in/academics" className="text-blue-200 hover:text-white">Academics</a></li>
+              <li><a href="https://gangamaiengg.org.in/placements" className="text-blue-200 hover:text-white">Placements</a></li>
+              <li><a href="https://gangamaiengg.org.in/student-corner" className="text-blue-200 hover:text-white">Student Corner</a></li>
+              <li><a href="https://gangamaiengg.org.in/contact" className="text-blue-200 hover:text-white">Contact</a></li>
             </ul>
           </div>
 
@@ -48,11 +48,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 mt-0.5" />
-                <span className="text-blue-200">Sector 123, Noida, Uttar Pradesh - 201301</span>
+                <span className="text-blue-200">Plot No. 6, Knowledge Park I, Greater Noida, Uttar Pradesh - 201306</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2" />
-                <span className="text-blue-200">+91 123 456 7890</span>
+                <span className="text-blue-200">+91 0120-2657095, 2657096</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2" />

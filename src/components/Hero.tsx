@@ -16,17 +16,17 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button className="bg-white text-blue-800 hover:bg-gray-100">
-              Admission Enquiry
+              <a href="https://gangamaiengg.org.in/admissions">Admission Enquiry</a>
             </Button>
             <Button variant="outline" className="border-white text-white hover:bg-blue-700">
-              Explore Programs
+              <a href="https://gangamaiengg.org.in/courses">Explore Programs</a>
             </Button>
           </div>
         </div>
       </div>
       <div className="absolute bottom-0 right-0 w-1/3 h-full opacity-10">
         <div className="w-full h-full bg-contain bg-no-repeat bg-right-bottom" 
-             style={{ backgroundImage: "url('/placeholder.svg')" }}></div>
+             style={{ backgroundImage: "url('https://gangamaiengg.org.in/assets/images/home/college.jpg')" }}></div>
       </div>
     </section>
   );

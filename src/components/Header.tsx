@@ -9,7 +9,7 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           <div className="flex items-center">
             <Phone className="h-4 w-4 mr-2" />
-            <span className="text-sm">+91 123 456 7890</span>
+            <span className="text-sm">+91 0120-2657095, 2657096</span>
           </div>
           <div className="flex items-center">
             <Mail className="h-4 w-4 mr-2" />
@@ -17,8 +17,8 @@ const Header = () => {
           </div>
         </div>
         <div className="flex space-x-4">
-          <a href="#" className="text-sm hover:underline">Student Login</a>
-          <a href="#" className="text-sm hover:underline">Faculty Login</a>
+          <a href="https://erp.gangamaiengg.org.in/Student" className="text-sm hover:underline">Student Login</a>
+          <a href="https://erp.gangamaiengg.org.in/Faculty" className="text-sm hover:underline">Faculty Login</a>
         </div>
       </div>
     </header>
