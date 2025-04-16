@@ -4,10 +4,30 @@ import { Book, Calendar, Download, Award } from "lucide-react";
 
 const StudentCorner = () => {
   const resources = [
-    { icon: Book, title: "E-Learning Portal", description: "Access online lectures, tutorials and study materials" },
-    { icon: Calendar, title: "Academic Calendar", description: "Stay updated with important dates and events" },
-    { icon: Download, title: "Downloads", description: "Access important forms, syllabi and other documents" },
-    { icon: Award, title: "Student Achievements", description: "Celebrating our students' accomplishments" },
+    { 
+      icon: Book, 
+      title: "E-Learning Portal", 
+      description: "Access online lectures, tutorials and study materials",
+      link: "https://gangamaiengg.org.in/student-corner/e-learning/"
+    },
+    { 
+      icon: Calendar, 
+      title: "Academic Calendar", 
+      description: "Stay updated with important dates and events",
+      link: "https://gangamaiengg.org.in/student-corner/academic-calendar/"
+    },
+    { 
+      icon: Download, 
+      title: "Downloads", 
+      description: "Access important forms, syllabi and other documents",
+      link: "https://gangamaiengg.org.in/student-corner/downloads/"
+    },
+    { 
+      icon: Award, 
+      title: "Student Achievements", 
+      description: "Celebrating our students' accomplishments",
+      link: "https://gangamaiengg.org.in/student-corner/achievements/"
+    },
   ];
 
   return (
@@ -31,7 +51,7 @@ const StudentCorner = () => {
               <h3 className="text-xl font-bold text-blue-900 mb-2 text-center">{item.title}</h3>
               <p className="text-gray-600 text-center">{item.description}</p>
               <div className="mt-4 text-center">
-                <a href="#" className="text-blue-700 hover:underline font-medium">Learn More</a>
+                <a href={item.link} className="text-blue-700 hover:underline font-medium">Learn More</a>
               </div>
             </div>
           ))}
@@ -45,7 +65,9 @@ const StudentCorner = () => {
                 "My experience at Ganga Mai Engineering College has been transformative. The faculty members are highly knowledgeable and supportive, and the placement cell worked tirelessly to help me secure a position at my dream company."
               </p>
               <div className="flex items-center">
-                <div className="bg-blue-200 h-10 w-10 rounded-full mr-3"></div>
+                <div className="bg-blue-200 h-10 w-10 rounded-full mr-3 overflow-hidden">
+                  <img src="https://gangamaiengg.org.in/wp-content/uploads/2019/11/student1.jpg" alt="Student" className="w-full h-full object-cover" />
+                </div>
                 <div>
                   <h4 className="font-semibold text-blue-900">Rahul Sharma</h4>
                   <p className="text-sm text-gray-500">B.Tech Computer Science, 2022</p>
@@ -57,7 +79,9 @@ const StudentCorner = () => {
                 "The practical approach to learning and state-of-the-art facilities at Ganga Mai Engineering College prepared me well for the industry. The placement opportunities provided by the college helped me start my career on a strong note."
               </p>
               <div className="flex items-center">
-                <div className="bg-blue-200 h-10 w-10 rounded-full mr-3"></div>
+                <div className="bg-blue-200 h-10 w-10 rounded-full mr-3 overflow-hidden">
+                  <img src="https://gangamaiengg.org.in/wp-content/uploads/2019/11/student2.jpg" alt="Student" className="w-full h-full object-cover" />
+                </div>
                 <div>
                   <h4 className="font-semibold text-blue-900">Priya Patel</h4>
                   <p className="text-sm text-gray-500">B.Tech Electronics, 2023</p>

@@ -10,10 +10,18 @@ const PlacementSection = () => {
     { year: "2021", placements: 350, highestPackage: 35, averagePackage: 6.9 },
   ];
 
-  // Sample top recruiters
+  // Sample top recruiters with logos
   const topRecruiters = [
-    "Microsoft", "Amazon", "Infosys", "TCS", "Wipro", 
-    "Accenture", "Google", "IBM", "Deloitte", "KPMG"
+    { name: "Microsoft", logo: "https://gangamaiengg.org.in/wp-content/uploads/2019/11/microsoft.png" },
+    { name: "Amazon", logo: "https://gangamaiengg.org.in/wp-content/uploads/2019/11/amazon.png" },
+    { name: "Infosys", logo: "https://gangamaiengg.org.in/wp-content/uploads/2019/11/infosys.png" },
+    { name: "TCS", logo: "https://gangamaiengg.org.in/wp-content/uploads/2019/11/tcs.png" },
+    { name: "Wipro", logo: "https://gangamaiengg.org.in/wp-content/uploads/2019/11/wipro.png" },
+    { name: "Accenture", logo: "https://gangamaiengg.org.in/wp-content/uploads/2019/11/accenture.png" },
+    { name: "Google", logo: "https://gangamaiengg.org.in/wp-content/uploads/2019/11/google.png" },
+    { name: "IBM", logo: "https://gangamaiengg.org.in/wp-content/uploads/2019/11/ibm.png" },
+    { name: "Deloitte", logo: "https://gangamaiengg.org.in/wp-content/uploads/2019/11/deloitte.png" },
+    { name: "KPMG", logo: "https://gangamaiengg.org.in/wp-content/uploads/2019/11/kpmg.png" }
   ];
 
   // Sample highlights
@@ -37,7 +45,7 @@ const PlacementSection = () => {
         {/* Placement Highlights */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {highlights.map((item, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow">
               <div className="flex justify-center mb-4">
                 <div className="p-3 rounded-full bg-blue-100 text-blue-700">
                   <item.icon className="h-8 w-8" />
@@ -81,17 +89,17 @@ const PlacementSection = () => {
           <h3 className="text-2xl font-bold text-blue-800 mb-6 text-center">Placement Process</h3>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow">
                 <div className="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-4">1</div>
                 <h4 className="font-semibold text-lg mb-2">Pre-Placement Training</h4>
                 <p className="text-gray-600">Resume building, aptitude training and technical workshops</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow">
                 <div className="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-4">2</div>
                 <h4 className="font-semibold text-lg mb-2">Campus Drives</h4>
                 <p className="text-gray-600">Aptitude tests, technical and HR interviews</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow">
                 <div className="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-4">3</div>
                 <h4 className="font-semibold text-lg mb-2">Placement</h4>
                 <p className="text-gray-600">Offer letters, internships and final placements</p>
@@ -103,13 +111,17 @@ const PlacementSection = () => {
         {/* Top Recruiters */}
         <div>
           <h3 className="text-2xl font-bold text-blue-800 mb-6 text-center">Our Top Recruiters</h3>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {topRecruiters.map((company, index) => (
               <div 
                 key={index} 
                 className="bg-white p-4 rounded-lg shadow-md text-center flex items-center justify-center h-24 hover:shadow-lg transition-shadow"
               >
-                <span className="font-medium text-gray-800">{company}</span>
+                {company.logo ? (
+                  <img src={company.logo} alt={company.name} className="max-h-16 max-w-full" />
+                ) : (
+                  <span className="font-medium text-gray-800">{company.name}</span>
+                )}
               </div>
             ))}
           </div>

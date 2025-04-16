@@ -15,7 +15,7 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img 
-              src="/placeholder.svg" 
+              src="https://gangamaiengg.org.in/wp-content/uploads/2019/11/about-image.jpg" 
               alt="College Campus" 
               className="rounded-lg shadow-md w-full h-auto"
             />
